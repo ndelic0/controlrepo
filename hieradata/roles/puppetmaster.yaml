@@ -1,0 +1,22 @@
+---
+hiera::hierarchy:
+  - 'virtual/%{::virtual}'
+  - 'nodes/%{::trusted.certname}'
+  - 'roles/%{::role}/%{::tier}'
+  - 'roles/%{::role}'
+  - '%{::tier}'
+  - 'common'
+
+hiera::backends:
+  - yaml
+  - eyaml
+hiera::yaml: '${::settings::confdir}/hiera.yaml'
+hiera::datadir: '${::settings::environmentpath}/%{environment}/hieradata'
+hiera::owner: 'pe-puppet'
+hiera::group: 'pe-puppet'
+hiera::eyaml: true
+hiera::eyaml_extension: 'yaml'
+hiera::provider: 'puppetserver_gem'
+hiera::create_keys: true
+hiera::master_service: 'pe-puppetserver'
+hiera::notify: 'Service[pe-puppetserver]'
