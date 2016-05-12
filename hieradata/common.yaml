@@ -28,3 +28,6 @@ ssh::client::options:
     'HashKnownHosts'            : 'yes'
     'GSSAPIAuthentication'      : 'yes'
     'GSSAPIDelegateCredentials' : 'no'
+
+openssl::package_ensure: 'latest'
+openssl::ca_certificates_ensure: 'latest'
