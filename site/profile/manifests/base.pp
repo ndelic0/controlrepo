@@ -6,4 +6,7 @@ class profile::base {
 
   include ::firewall
   include ::selinux
+  include ::ssh::client
+  include ::ssh::server
+  include ::openssl
 }

@@ -20,6 +20,8 @@ mod "puppetlabs/inifile",                  '1.5.0'
 mod "puppetlabs/stdlib",                   '4.12.0'
 mod "puppetlabs/concat",                   '2.1.0'
 mod "puppetlabs/puppetserver_gem",         '0.2.0'
+mod "saz/ssh",                             '2.8.1'
+mod "camptocamp/openssl",                  '1.6.1'
 
 mod 'firewall',
   :git    => 'https://github.com/puppetlabs/puppetlabs-firewall.git',
