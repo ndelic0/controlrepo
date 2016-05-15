@@ -30,7 +30,9 @@ node default {
   # Example:
   #   class { 'my_class': }
   #
-  if !empty( $facts['puppet_role'] ) {
-    include "role::${facts['puppet_role']}"
-  }
+  #if !empty( $facts['puppet_role'] ) {
+  #  include "role::${facts['puppet_role']}"
+  #}
 }
+
+  lookup('classes', Array[String], 'unique').include
