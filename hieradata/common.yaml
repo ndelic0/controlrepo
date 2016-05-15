@@ -5,12 +5,20 @@ message: "This node is using common data"
 puppet_enterprise::master::puppetserver::jruby_max_requests_per_instance: 0
 
 classes:
+  - 'profile::common_packages'
   - 'ntp'
   - 'firewall'
   - 'selinux'
+  - 'sudo'
+  - 'sudo::configs'
   - 'ssh::client'
   - 'ssh::server'
   - 'openssl'
+  - 'limits'
+  - 'root'
+  - 'auditd'
+  - 'login_defs'
+  - 'colorprompt'
 
 firewall::ensure: 'stopped'
 
@@ -39,3 +47,40 @@ ssh::client::options:
 
 openssl::package_ensure: 'latest'
 openssl::ca_certificates_ensure: 'latest'
+
+limits::entries:
+  '90-nproc.conf':
+    'ensure'     : 'present'
+    'user'       : '*'
+    'limit_type' : 'nproc'
+    'hard'       : '65536'
+    'soft'       : '65536'
+  '90-nofile.conf':
+    'ensure'     : 'present'
+    'user'       : '*'
+    'limit_type' : 'nofile'
+    'hard'       : '65536'
+    'soft'       : '65536'
+
+login_defs::options:
+  'PASS_MAX_DAYS' : '90'
+  'PASS_MIN_DAYS' : '7'
+  'PASS_WARN_AGE' : '7'
+
+
+common::packages:
+  'sysstat': {}
+  'augeas':
+    'ensure' : 'latest'
+  'nc': {}
+  'mlocate': {}
+  'screen' : {}
+  'unzip': {}
+  'bzip2': {}
+  'bash':
+    'ensure': 'latest'
+  'nc': {}
+  'curl': {}
+  'net-tools': {}
+  'bind-utils': {}
+  'telnet': {}

@@ -27,3 +27,8 @@ puppet_enterprise::profile::orchestrator::java_args:
   Xmx: '64m'
   Xms: '64m'
   'XX:+UseG1GC': ''
+#
+sudo::configs:
+  'vagrant':
+    'content': "%vagrant ALL=(ALL) NOPASSWD: ALL"
+    'priority': 10  
