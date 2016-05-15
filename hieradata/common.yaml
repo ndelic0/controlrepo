@@ -5,14 +5,14 @@ message: "This node is using common data"
 puppet_enterprise::master::puppetserver::jruby_max_requests_per_instance: 0
 
 classes:
+  - 'firewall'
+  - 'ssh::server'
+  - 'ssh::client'
   - 'profile::common_packages'
   - 'ntp'
-  - 'firewall'
   - 'selinux'
   - 'sudo'
   - 'sudo::configs'
-  - 'ssh::client'
-  - 'ssh::server'
   - 'openssl'
   - 'limits'
   - 'root'
