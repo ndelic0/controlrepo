@@ -35,4 +35,12 @@ node default {
   #}
 }
 
-  lookup('classes', Array[String], 'unique').include
+$classification = lookup({"name" => "classification",
+  "merge" => {
+    "strategy" => "deep",
+    "knockout_prefix" => "--",
+    "sort_merge_arrays" => true
+  }
+})
+
+$classification["classes"].include
