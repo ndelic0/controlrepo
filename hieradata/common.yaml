@@ -85,3 +85,5 @@ common::packages:
   'net-tools': {}
   'bind-utils': {}
   'telnet': {}
+  'vim':  {}
+  'nano': {}
