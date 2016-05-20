@@ -1,3 +1,3 @@
 ---
-classification::classes:
+classifier::extra_classes:
   - 'profile::puppetmaster'
