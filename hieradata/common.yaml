@@ -4,22 +4,21 @@ message: "This node is using common data"
 #Puppet Server Tuning
 puppet_enterprise::master::puppetserver::jruby_max_requests_per_instance: 0
 
-classification:
-  classes:
-    - 'firewall'
-    - 'ssh::server'
-    - 'ssh::client'
-    - 'profile::common_packages'
-    - 'ntp'
-    - 'selinux'
-    - 'sudo'
-    - 'sudo::configs'
-    - 'openssl'
-    - 'limits'
-    - 'root'
-    - 'auditd'
-    - 'login_defs'
-    - 'colorprompt'
+classifer::extra_classe:
+  - 'firewall'
+  - 'ssh::server'
+  - 'ssh::client'
+  - 'profile::common_packages'
+  - 'ntp'
+  - 'selinux'
+  - 'sudo'
+  - 'sudo::configs'
+  - 'openssl'
+  - 'limits'
+  - 'root'
+  - 'auditd'
+  - 'login_defs'
+  - 'colorprompt'
 
 firewall::ensure: 'stopped'
 

@@ -1,4 +1,3 @@
 ---
-classification:
-  classes:
-    - 'profile::puppetmaster'
+classification::classes:
+  - 'profile::puppetmaster'

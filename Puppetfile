@@ -19,6 +19,7 @@ forge "http://forge.puppetlabs.com"
 mod "puppetlabs/inifile",                  '1.5.0'
 mod "puppetlabs/stdlib",                   '4.12.0'
 mod "puppetlabs/concat",                   '2.1.0'
+mod "ripienaar/classifier",                '0.0.7'
 mod "puppetlabs/puppetserver_gem",         '0.2.0'
 mod "saz/ssh",                             '2.8.1'
 mod "saz/sudo",                            '3.1.0'
