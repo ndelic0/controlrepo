@@ -34,16 +34,14 @@ node default {
   #  include "role::${facts['puppet_role']}"
   #}
 
-  include classifier
-
 }
 
-#$classification = lookup({"name" => "classification",
-#  "merge" => {
-#    "strategy" => "deep",
-#    "knockout_prefix" => "--",
-#    "sort_merge_arrays" => true
-#  }
-#})
+$classification = lookup({"name" => "classification",
+  "merge" => {
+    "strategy" => "deep",
+    "knockout_prefix" => "--",
+    "sort_merge_arrays" => true
+  }
+})
 
-#$classification["classes"].include
+$classification["classes"].include
