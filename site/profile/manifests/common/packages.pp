@@ -1,5 +1,5 @@
 #
-class profile::common_packages {
+class profile::common::packages {
   $packages=lookup('common::packages')
 
   $packages.each |$name, $package|{

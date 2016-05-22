@@ -9,7 +9,8 @@ classification:
     - 'firewall'
     - 'ssh::server'
     - 'ssh::client'
-    - 'profile::common_packages'
+    - 'profile::common::packages'
+    - 'profile::common::sysctl'
     - 'ntp'
     - 'selinux'
     - 'sudo'
@@ -87,3 +88,8 @@ common::packages:
   'telnet': {}
   'vim':  {}
   'nano': {}
+
+common::sysctl:
+  'net.ipv4.tcp_timestamps':
+    'ensure': 'present' 
+    'value': '0'
