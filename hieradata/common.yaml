@@ -113,7 +113,7 @@ common::sysctl:
     'ensure': 'present'
     'value': '1'
 
-common:kernel_params:
+common::kernel_params:
   'elevator':
     'ensure': 'present'
     'value': 'noop'
