@@ -91,5 +91,18 @@ common::packages:
 
 common::sysctl:
   'net.ipv4.tcp_timestamps':
-    'ensure': 'present' 
+    'ensure': 'present'
     'value': '0'
+  'net.ipv4.conf.all.accept_redirects':
+    'ensure': 'present'
+    'value': '0'
+  'net.ipv4.conf.default.accept_redirects':
+    'ensure': 'present'
+    'value': '0'
+  'net.ipv4.conf.all.secure_redirects':
+    'ensure': 'present'
+    'value': '0'
+  'net.ipv4.conf.default.secure_redirects':
+    'ensure': 'present'
+    'value': '0'
+
