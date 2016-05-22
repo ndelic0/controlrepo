@@ -4,7 +4,7 @@ class profile::common::sysctl {
 
   $sysctl.each | $name, $sysctl | {
     sysctl { $name:
-      ensure => $sysctl[ 'ensure' ]
+      ensure => $sysctl[ 'ensure' ],
       value  => $sysctl[ 'value' ]
     }
 
