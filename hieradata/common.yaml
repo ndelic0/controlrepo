@@ -21,6 +21,7 @@ classification:
     - 'auditd'
     - 'login_defs'
     - 'colorprompt'
+    - 'profile::common::kernel'
 
 firewall::ensure: 'stopped'
 
