@@ -111,3 +111,11 @@ common::sysctl:
   'net.ipv6.conf.default.disable_ipv6':
     'ensure': 'present'
     'value': '1'
+
+common:kernel_params:
+  'elevator':
+    'ensure': 'present'
+    'value': 'noop'
+  'clocksource_failover':
+    'ensure': 'present'
+    'value': 'acpi_pm'
