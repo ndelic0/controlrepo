@@ -51,3 +51,7 @@ mod 'hiera',
 mod 'ntp',
   :git    => 'https://github.com/puppetlabs/puppetlabs-ntp.git',
   :commit => 'd36379ef9fe5ae42749046c8f1a59ae0b96c492d'
+
+mod 'reboot',
+  :git => 'https://github.com/puppetlabs/puppetlabs-reboot.git',
+  :ref => '14966a8447430f66e1cbe42af90ca7e16431fe76'
