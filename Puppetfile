@@ -55,3 +55,7 @@ mod 'ntp',
 mod 'reboot',
   :git => 'https://github.com/puppetlabs/puppetlabs-reboot.git',
   :ref => '14966a8447430f66e1cbe42af90ca7e16431fe76'
+
+mod 'java',
+  :git  => 'https://github.com/puppetlabs/puppetlabs-java.git',
+  :ref  => '749a735559b0bb2e9323dca12513ef6729646764'
